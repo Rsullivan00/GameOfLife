@@ -1,21 +1,5 @@
-﻿html {
-font-family: 'Open Sans', sans-serif;
-font-weight: 600;
-width: 550px;
-margin-left: auto;
-margin-right: auto;
-}
-
-body {
-color: #FFFFFF;
-background-color:#171717;
-}
-
-h1 {
-text-shadow: 1px 1px 1px;
-}
-
-button {
+﻿button.alive {
+background-color: #FFFFFF;
 /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
 opacity: 0.8;
 -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 80);
@@ -25,23 +9,33 @@ filter: alpha(opacity = 80);
 /*All filters must be placed together*/
 padding: 0;
 border: none;
-width: 30px;
-height: 30px;
-font-size: 10px;
-box-shadow: 0 0px 0px 2px;
-margin: 1px;
-transition: all 0.5s;
+width: 25px;
+height: 25px;
+margin: 0px;
 }
 
-.alive {
-background-color: #FFFFFF;
-}
-
-.dead {
+button.dead {
 background-color: #000000;
+/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+opacity: 0.8;
+-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 80);
+/*-ms-filter must come before filter*/
+filter: alpha(opacity = 80);
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*All filters must be placed together*/
+padding: 0;
+border: none;
+width: 25px;
+height: 25px;
+margin: 0px;
 }
 
-button:hover {
+button.dead:hover {
+background-color: #82d99c;
+transform: scale(1.2);
+}
+
+button.alive:hover {
 background-color: #82d99c;
 transform: scale(1.2);
 }

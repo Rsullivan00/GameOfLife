@@ -7,146 +7,50 @@
     <meta name="author" content="Rick Sullivan">
 
     <!-- Styles -->
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/boostrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 
     <script>
         run = function() {
-            board = new Board(10);
-            board.reset();
+            board = new Board(25);
+            board.clear();
             document.getElementById("game").appendChild(board.table);
         }
     </script>
 </head>
 
 <body onload="run()">
-<div class="container-fluid">
-    <div class="row-fluid">
+<div>
+    <div>
      
     <center>
     <h1>Conway's Game of Life</h1>
-    <h3>By Rick Sullivan</h3>
     </center>
     </div>
 
-    <center>
-    <div id="game">
+    <div align ="center" id="game">
     </div>
-    </center>
-<!--
-    <center>
-    <table class="table">
-        <tr>
-            <td><button class="dead" id="aa"></button></td>
-            <td><button class="alive" id="ab"></button></td>
-            <td><button class="a" id="ac"></button></td>
-            <td><button class="a" id="ad"></button></td>
-            <td><button class="a" id="ae"></button></td>
-            <td><button class="a" id="af"></button></td>
-            <td><button class="a" id="ag"></button></td>
-            <td><button class="a" id="ah"></button></td>
-            <td><button class="a" id="ai"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="ba"></button></td>
-            <td><button class="a" id="bb"></button></td>
-            <td><button class="a" id="bc"></button></td>
-            <td><button class="a" id="bd"></button></td>
-            <td><button class="a" id="be"></button></td>
-            <td><button class="a" id="bf"></button></td>
-            <td><button class="a" id="bg"></button></td>
-            <td><button class="a" id="bh"></button></td>
-            <td><button class="a" id="bi"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="ca"></button></td>
-            <td><button class="a" id="cb"></button></td>
-            <td><button class="a" id="cc"></button></td>
-            <td><button class="a" id="cd"></button></td>
-            <td><button class="a" id="ce"></button></td>
-            <td><button class="a" id="cf"></button></td>
-            <td><button class="a" id="cg"></button></td>
-            <td><button class="a" id="ch"></button></td>
-            <td><button class="a" id="ci"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="da"></button></td>
-            <td><button class="a" id="db"></button></td>
-            <td><button class="a" id="dc"></button></td>
-            <td><button class="a" id="dd"></button></td>
-            <td><button class="a" id="de"></button></td>
-            <td><button class="a" id="df"></button></td>
-            <td><button class="a" id="dg"></button></td>
-            <td><button class="a" id="dh"></button></td>
-            <td><button class="a" id="di"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="ea"></button></td>
-            <td><button class="a" id="eb"></button></td>
-            <td><button class="a" id="ec"></button></td>
-            <td><button class="a" id="ed"></button></td>
-            <td><button class="a" id="ee"></button></td>
-            <td><button class="a" id="ef"></button></td>
-            <td><button class="a" id="eg"></button></td>
-            <td><button class="a" id="eh"></button></td>
-            <td><button class="a" id="ei"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="fa"></button></td>
-            <td><button class="a" id="fb"></button></td>
-            <td><button class="a" id="fc"></button></td>
-            <td><button class="a" id="fd"></button></td>
-            <td><button class="a" id="fe"></button></td>
-            <td><button class="a" id="ff"></button></td>
-            <td><button class="a" id="fg"></button></td>
-            <td><button class="a" id="fh"></button></td>
-            <td><button class="a" id="fi"></button></td>
-        </tr>
-         <tr>
-            <td><button class="a" id="ga"></button></td>
-            <td><button class="a" id="gb"></button></td>
-            <td><button class="a" id="gc"></button></td>
-            <td><button class="a" id="gd"></button></td>
-            <td><button class="a" id="ge"></button></td>
-            <td><button class="a" id="gf"></button></td>
-            <td><button class="a" id="gg"></button></td>
-            <td><button class="a" id="gh"></button></td>
-            <td><button class="a" id="gi"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="ha"></button></td>
-            <td><button class="a" id="hb"></button></td>
-            <td><button class="a" id="hc"></button></td>
-            <td><button class="a" id="hd"></button></td>
-            <td><button class="a" id="he"></button></td>
-            <td><button class="a" id="hf"></button></td>
-            <td><button class="a" id="hg"></button></td>
-            <td><button class="a" id="hh"></button></td>
-            <td><button class="a" id="hi"></button></td>
-        </tr>
-        <tr>
-            <td><button class="a" id="ia"></button></td>
-            <td><button class="a" id="ib"></button></td>
-            <td><button class="a" id="ic"></button></td>
-            <td><button class="a" id="id"></button></td>
-            <td><button class="a" id="ie"></button></td>
-            <td><button class="a" id="if"></button></td>
-            <td><button class="a" id="ig"></button></td>
-            <td><button class="a" id="ih"></button></td>
-            <td><button class="a" id="ii"></button></td>
-        </tr>
-    </table>
-    </center>
---> 
 
+    <div align ="center">
     <br>
+    <a href='#' onclick='board.randomize();'>RANDOMIZE</a>
+    <a href='#' onclick='board.clear();'>RESET</a>
+    <a href='#' onclick='board.start();'>PLAY</a>
+    <a href='#' onclick='board.pause();'>STOP</a>
+    <br>
+    Speeds:
+        <a href='#' onclick='board.speed(1500);'>Slow</a>
+        <a href='#' onclick='board.speed(1000);'>Med</a>
+        <a href='#' onclick='board.speed(600);'>Fast</a>
+        <a href='#' onclick='board.speed(300);'>Faster</a>
+    </div>
+
     <br>
     <br>
     <footer>
     <center><p>
       <a href="mailto:rick@ricksullivan.net" target="_blank">E-mail</a>
-      <a href="http://www.github.com/Rsullivan00" target="_blank">GitHub</a>
+      <a href="http://www.github.com/Rsullivan00/GameOfLife.git" target="_blank">GitHub</a>
     </p></center>
 
     <center><p>&copy; Rick Sullivan 2013</p>
@@ -160,7 +64,10 @@ Board = function(size) {
     this.size = size;
 
     this.buttons = [];
+    this.next = [];
     this.table = document.createElement("table");
+    this.delay = 1500;
+    this.stop = true;
 
     for(var i = 0; i < size; i++) {
         var tr = document.createElement("tr");
@@ -168,6 +75,7 @@ Board = function(size) {
 
             var button = new cell(alert);
             this.buttons.push(button);
+            this.next.push("dead");
 
             var td = document.createElement("td");
             td.appendChild(button.element);
@@ -179,10 +87,83 @@ Board = function(size) {
 }
 
 Board.prototype = {
-    reset: function(){
+
+    clear: function() {
         for(var i in this.buttons) {
             this.buttons[i].reset();
         }
+        this.stop = true;
+    },
+
+    randomize: function() {
+        this.clear();
+        for(var i in this.buttons) {
+            if(Math.floor(Math.random()*2) == 1)
+                this.buttons[i].change();
+        }
+    },
+
+    start: function() {
+        var self = this;
+        this.stop = false;
+        self.play();
+    },
+
+    play: function() {
+        var self = this;
+        if(this.stop == true)
+            return;
+        for(var i = this.size+1; i < (this.size)*(this.size-1)-1; i++) {
+            var n = 0;
+            n = this.neighbors(i);
+            if(n < 2 || n > 3)
+                //Kill
+                this.next[i] = "dead";
+            else if(n == 3)
+                //Make Alive
+                this.next[i] = "alive";
+        }
+
+        this.update();
+
+        setTimeout(function() { self.play(); }, self.delay); //( , self.delay);
+    },
+
+    pause: function() {
+        this.stop = true;
+    },
+
+    update: function() {
+        for(var i in this.buttons) {
+            if(this.buttons[i].element.className != this.next[i])
+                this.buttons[i].change();
+        }
+    },
+
+    //Return the number of alive neighbors of button x
+    neighbors: function(x) {
+        var count = 0;
+        if(this.buttons[x+1].element.className == "alive")
+            count++;
+        if(this.buttons[x-1].element.className == "alive")
+            count++;
+        if(this.buttons[x-this.size].element.className == "alive")
+            count++;
+        if(this.buttons[x-this.size-1].element.className == "alive")
+            count++;
+        if(this.buttons[x-this.size+1].element.className == "alive")
+            count++;
+        if(this.buttons[x+this.size].element.className == "alive")
+            count++;
+        if(this.buttons[x+this.size-1].element.className == "alive")
+            count++;
+        if(this.buttons[x+this.size+1].element.className == "alive")
+            count++;
+        return count;
+    },
+
+    speed: function(x) {
+        this.delay = x;
     }
 }
 
@@ -204,6 +185,14 @@ cell.prototype = {
 
     reset: function() {
         this.element.className = "dead";
+    },
+
+    live: function() {
+        this.element.className = "alive";
+    },
+
+    getStatus: function() {
+        return this.element.className;
     }
 }
 </script>
